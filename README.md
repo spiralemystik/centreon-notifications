@@ -3,6 +3,15 @@ centreon-notifications
 
 
 ## Mail
+
+# Prerequisites
+For central server adjust the php references (for version 20.04 and above)
+   #!/opt/rh/rh-php72/root/usr/bin/php -c /etc/opt/rh/rh-php72/php.ini
+   
+   For the poller:
+   install mail client and php cli
+      yum install -y php-cli mailx
+       
 # Setup
 
 1. Download the scripts in the plugins directory and modify these following variables :
