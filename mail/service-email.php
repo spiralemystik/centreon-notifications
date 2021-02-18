@@ -6,6 +6,7 @@
 ###----------------------------------------------
 ### 1.0      26/07/15  Shini31   1.0 stable release
 ### 1.1      25/03/16  Shini31   1.1 bugfix release
+### 1.2      18/02/21  SpiraleMystik 1.2 isolate tmp temporary files location
 ####
 #####
 */
@@ -45,7 +46,7 @@
     if($f_notify_type=="PROBLEM")
     {
         $currenttime = time();
-        $file_name = "/tmp/$f_host_name.$f_serv_desc.txt";
+        $file_name = "/tmp/mail-php/$f_host_name.$f_serv_desc.txt";
         if ($f_attempts==1)
         {
             if(file_exists($file_name)==true) {unlink($file_name);}
@@ -58,7 +59,7 @@
     {
         $currenttime = time();
         $oldtime = time();
-        $file_name = "/tmp/$f_host_name.$f_serv_desc.txt";
+        $file_name = "/tmp/mail-php/$f_host_name.$f_serv_desc.txt";
         if (file_exists($file_name)==true)
         {
             $oldtime = intval(file_get_contents($file_name));
